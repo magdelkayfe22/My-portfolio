@@ -37,6 +37,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+      <footer className="footer">
+        © {new Date().getFullYear()} Magd Elkayfe. All rights reserved.
+      </footer>
     </div>
   );
 }

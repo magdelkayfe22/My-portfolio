@@ -39,6 +39,16 @@
   padding: 0;
 }
 
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #888;
+  font-size: 1rem;
+  background: #181c20;
+  margin-top: 2rem;
+  border-top: 1px solid #222;
+}
+
 .navbar a {
   color: #e0e0e0;
   text-decoration: none;
