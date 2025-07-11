@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import About from './components/About';
+import Projects from './components/Projects';
+import Certifications from './components/Certifications';
+
+import Contact from './components/Contact';
+import HackerBackground from './components/HackerTransition';
+import './components/HackerTransition.css';
 
 function App() {
+
+
+  // Removed transitionTrigger effect as it is no longer used
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="portfolio-app">
+      <HackerBackground />
+      <nav className="navbar">
+        <div className="logo">My CyberSecurity Portfolio</div>
+        <ul>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/certifications">Certifications</Link></li>
+
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav>
+      <main>
+        <Routes>
+          <Route path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/certifications" element={<Certifications />} />
+
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
     </div>
   );
 }

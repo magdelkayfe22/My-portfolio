@@ -1,0 +1,68 @@
+.matrix-bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  background: linear-gradient(135deg, #0a2342 0%, #0e3a5e 50%, #112d4e 100%);
+  overflow: hidden;
+}
+
+.portfolio-app {
+  position: relative;
+  z-index: 1;
+}
+
+
+.matrix-bg-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 2.2vw;
+  min-width: 18px;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 2vw;
+  color: #1ecfff;
+  text-shadow: 0 0 12px #1ecfff, 0 0 22px #0ff7;
+  opacity: 0.19;
+  animation: matrix-bg-wave linear infinite;
+  animation-name: matrix-bg-wave;
+}
+
+
+.matrix-bg-col span {
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: 0.07em;
+}
+
+
+@keyframes matrix-bg-wave {
+  0% {
+    transform: translateY(-50vh);
+    opacity: 0.19;
+  }
+  40% {
+    opacity: 0.33;
+  }
+  60% {
+    opacity: 0.33;
+  }
+  100% {
+    transform: translateY(60vh);
+    opacity: 0.19;
+  }
+}
+
+
+@keyframes matrix-fadeout {
+  0% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}

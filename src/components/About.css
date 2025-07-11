@@ -1,0 +1,85 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #181c20;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  box-shadow: 0 0 12px #0ff2;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.about-headshot {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 0 18px #1ecfff44, 0 2px 18px #12202b99;
+  border: 3px solid #1ecfff;
+}
+
+.about-section figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 1.2em 0;
+}
+figure {
+  margin: 0;
+  text-align: center;
+}
+figcaption {
+  color: #0ff;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 6px #0ff3;
+}
+.about-bio h2 {
+  color: #0ff;
+  margin-bottom: 0.5rem;
+}
+.about-bio p {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+@media (max-width: 700px) {
+  .about-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* Resume PDF button styles */
+.resume-view-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.7em 1.5em;
+  font-size: 1.08rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  color: #fff;
+  background: linear-gradient(90deg, #1995e3 0%, #1ecfff 100%);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 8px #1ecfff99, 0 0 2px #1995e3;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.04em;
+}
+.resume-view-btn:hover, .resume-view-btn:focus {
+  background: #112d4e;
+  color: #1ecfff;
+  box-shadow: 0 0 14px #1ecfff, 0 0 4px #1995e3;
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  .about-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+} 

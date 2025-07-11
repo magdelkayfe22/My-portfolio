@@ -1,3 +1,80 @@
+.body {
+  background: #14181c;
+  color: #e0e0e0;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.portfolio-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: #181c20;
+  border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  box-shadow: 0 2px 8px #000a;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #0ff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #0ff7;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #0ff;
+  text-shadow: 0 0 8px #0ff7;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 1rem 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: flex-start;
+  }
+  main {
+    padding: 1rem 0.2rem;
+  }
+}
+
 .App {
   text-align: center;
 }
