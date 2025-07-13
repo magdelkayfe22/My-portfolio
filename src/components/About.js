@@ -24,7 +24,7 @@ const About = () => (
           <img src={linkedinIcon} alt="LinkedIn profile" className="about-icon-btn" style={{ width: '38px', height: '38px' }} />
         </a>
       </div>
-      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-view-btn">View My Resume (PDF)</a>
+      <a href="/My_Resume_1.pdf" target="_blank" rel="noopener noreferrer" className="resume-view-btn">View My Resume (PDF)</a>
     </div>
   </section>
 );
