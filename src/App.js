@@ -1,5 +1,4 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -20,25 +19,20 @@ function App() {
       <nav className="navbar">
         <div className="logo">My CyberSecurity Portfolio</div>
         <ul>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/certifications">Certifications</Link></li>
-
-          <li><Link to="/contact">Contact</Link></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <main>
-        <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/certifications" element={<Certifications />} />
-
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <section id="about"><About /></section>
+        <section id="projects"><Projects /></section>
+        <section id="certifications"><Certifications /></section>
+        <section id="contact"><Contact /></section>
       </main>
       <footer className="footer">
-        © {new Date().getFullYear()} Magd Elkayfe. All rights reserved.
+        &copy; {new Date().getFullYear()} Magd Elkayfe. All rights reserved.
       </footer>
     </div>
   );
