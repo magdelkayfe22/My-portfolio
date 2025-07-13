@@ -8,7 +8,7 @@ const Certifications = () => (
       <div className="cert-badge">
         <img src={require('../assets/cisco_logo.png')} alt="Cisco Logo" className="cert-logo" />
         <span>Intro to Cybersecurity</span>
-        <a href={`${process.env.PUBLIC_URL}/cisco.png`} target="_blank" rel="noopener noreferrer" download>
+        <a href={`${process.env.PUBLIC_URL}/cisco.png`} target="_blank" rel="noopener noreferrer">
           <img src={`${process.env.PUBLIC_URL}/cisco.png`} alt="Cisco Intro to Cybersecurity Certificate" className="cert-img cert-img-large" />
         </a>
       </div>
