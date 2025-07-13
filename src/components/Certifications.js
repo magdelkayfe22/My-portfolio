@@ -8,8 +8,8 @@ const Certifications = () => (
       <div className="cert-badge">
         <img src={require('../assets/cisco_logo.png')} alt="Cisco Logo" className="cert-logo" />
         <span>Intro to Cybersecurity</span>
-        <a href={require('../assets/cisco_logo.png')} target="_blank" rel="noopener noreferrer" download>
-          <img src={require('../assets/cisco_logo.png')} alt="Cisco Intro to Cybersecurity Certificate" className="cert-img cert-img-large" />
+        <a href={require('../assets/cisco.png')} target="_blank" rel="noopener noreferrer" download>
+          <img src={require('../assets/cisco.png')} alt="Cisco Intro to Cybersecurity Certificate" className="cert-img cert-img-large" />
         </a>
       </div>
       <div className="cert-badge">
