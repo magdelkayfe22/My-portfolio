@@ -10,7 +10,10 @@ const WORD_THEMES = {
   ],
   Food: [
     'pizza', 'hamburger', 'avocado', 'pancake', 'chocolate', 'spaghetti', 'omelette', 'cupcake', 'broccoli', 'burrito'
-  ]
+  ],
+   OnePiece: [
+    'zoro' , 'nami' , 'bustercall' , 'yonko' , 'wano' , 'logia' , 'luffy' , 'gearfive' , 'haki' , 'marines'
+   ]
 };
 const THEME_OPTIONS = Object.keys(WORD_THEMES);
 
