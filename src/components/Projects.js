@@ -23,9 +23,10 @@ const Projects = () => {
           <img src={hangmanImg} alt="Hangman drawing" className="project-image" style={{ display: 'block', margin: '0 auto 1rem', maxWidth: '180px', width: '100%' }} />
           <h3>Hangman Game</h3>
           <p>This is the Classic Hangman game built in Python language and changed to React for a more interactive experience. Try to guess the word before the man is fully drawn! <a href="https://github.com/magdelkayfe22/PythonLand/blob/main/PersonalProjects/hangman.py" target="_blank" rel="noopener noreferrer">(View Python code)</a></p>
-          <button className="play-hangman-btn" onClick={() => setShowHangman(v => !v)}>
-            {showHangman ? 'Hide Hangman' : 'Play Hangman'}
-          </button>
+          <button className={`play-hangman-btn cyber-toggle-btn${showHangman ? ' active' : ''}`} onClick={() => setShowHangman(v => !v)}>
+  <span className="hangman-btn-icon" aria-hidden="true">{showHangman ? '✖' : '▶'}</span>
+  {showHangman ? 'Hide Hangman' : 'Play Hangman'}
+</button>
         </div>
         <div className="project-card">
           <h3>New Project</h3>

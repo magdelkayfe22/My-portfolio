@@ -16,7 +16,7 @@ const THEME_OPTIONS = Object.keys(WORD_THEMES);
 
 
 const HANGMAN_PICS = [
-  // 0 tries left (full hangman)
+
   `
     --------
     |      |
@@ -26,7 +26,7 @@ const HANGMAN_PICS = [
     |     / \\
     -
   `,
-  // 1 try left (missing right leg)
+
   `
     --------
     |      |
@@ -36,7 +36,7 @@ const HANGMAN_PICS = [
     |     / 
     -
   `,
-  // 2 tries left (missing both legs)
+
   `
     --------
     |      |
@@ -46,7 +46,7 @@ const HANGMAN_PICS = [
     |      
     -
   `,
-  // 3 tries left (missing right arm and both legs)
+
   `
     --------
     |      |
@@ -56,7 +56,7 @@ const HANGMAN_PICS = [
     |      
     -
   `,
-  // 4 tries left (only torso)
+
   `
     --------
     |      |
@@ -66,7 +66,7 @@ const HANGMAN_PICS = [
     |      
     -
   `,
-  // 5 tries left (only head)
+
   `
     --------
     |      |
@@ -76,7 +76,7 @@ const HANGMAN_PICS = [
     |      
     -
   `,
-  // 6 tries left (start, empty)
+
   `
     --------
     |      |
@@ -116,7 +116,7 @@ function Hangman() {
       setWin(false);
       setInput('');
     }
-    // eslint-disable-next-line
+
   }, [theme]);
 
   function handleInputChange(e) {
@@ -185,20 +185,23 @@ function Hangman() {
     setTheme(e.target.value);
   }
 
-  // Render ASCII hangman using <pre>
+  // We'll show the ASCII hangman art in a <pre> block for that classic look.
   const hangmanStage = HANGMAN_PICS[Math.max(0, Math.min(HANGMAN_PICS.length - 1, tries))];
 
   if (!theme) {
     return (
       <div className="hangman-theme-select">
         <h2>Hangman</h2>
-        <label htmlFor="theme-select" style={{fontWeight:'bold'}}>Choose a theme:</label>
-        <select id="theme-select" value={theme} onChange={handleThemeChange} style={{margin:'0 1em'}}>
-          <option value="">-- Select Theme --</option>
-          {THEME_OPTIONS.map(option => (
-            <option key={option} value={option}>{option}</option>
-          ))}
-        </select>
+        <div className="theme-select-wrapper">
+          <span className="theme-icon" aria-hidden="true">🛡️</span>
+          <label htmlFor="theme-select" style={{fontWeight:'bold', marginRight: '0.7em'}}>Choose a theme:</label>
+          <select id="theme-select" className="cyber-theme-select" value={theme} onChange={handleThemeChange}>
+            <option value="">-- Select Theme --</option>
+            {THEME_OPTIONS.map(option => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+        </div>
       </div>
     );
   }

@@ -14,7 +14,7 @@ const Certifications = () => (
       </div>
       <div className="cert-badge">
         <img src={require('../assets/google.png')} alt="Google Logo" className="cert-logo google-logo-fix" style={{ maxWidth: '120px', height: 'auto', display: 'block', margin: '0 auto' }} />
-        {/* No certificate image yet for Google */}
+        {/* Google certificate coming soon! */}
         <span>Google Cybersecurity Certification (in progress)</span>
       </div>
     </div>
